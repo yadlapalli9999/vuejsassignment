@@ -1,6 +1,7 @@
 <template>
     <div class="todo">
       <h1>{{msg}}</h1>
+        <a href="HelloWorld">Home</a>
            <div class="dropdown">
                 <span>City:</span>
                 <select  class="form-control drop" v-on:change="cityChange()" v-model="select">
