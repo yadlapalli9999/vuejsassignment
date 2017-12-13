@@ -11,17 +11,7 @@ export default new Vuex.Store({
     },
     mutations:{
         addTodo(state,newTodo){
-            let duplicateCity = true
-            for(let i=0;i<state.todos.length;i++){
-                if(state.todos[i]===this.newTodo){
-                    duplicateCity=false
-                    break
-                }
-            }
-            if(duplicateCity == true)
-            {
             state.todos.push({newTodo})
-            }
         },
         removeTodo(state, todo) {
 			state.todos.splice(state.todos.indexOf(todo), 1)

@@ -55,14 +55,16 @@ export default {
           if(store.state.todos[i].newTodo.toUpperCase() === this.newTodo.toUpperCase())
           {
             duplicateCity= false
+            alert("City Already Exists")
             this.newTodo=''
             break
           }
       }
-      if(duplicateCity == true){
+      if(duplicateCity == true){  
 			store.commit('addTodo', this.newTodo)
 			this.newTodo = ''
       }
+      
 		},
     removeTodo(id) {
 			store.commit('removeTodo', id)
